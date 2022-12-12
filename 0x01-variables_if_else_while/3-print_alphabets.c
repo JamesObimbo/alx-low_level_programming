@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - This program prints the alphabet in lowercase
  * and then in uppercase as well.
  * Return: Always 0 (Success) 
@@ -15,6 +15,5 @@ int main(void)
 		putchar(ch);
 
 	putchar('\n');
-
 	return (0);
 }
