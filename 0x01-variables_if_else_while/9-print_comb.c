@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combinations of single-digit numbers
+ * main - This program prints all combinations of
+ * single digit numbers
  * Numbers must be separated by ,, followed by a space
  * Numbers should be printed in ascending order
  * use putchar only for printing
  * can only use putchar four times maximum in your code
  * cannot use char variable
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
