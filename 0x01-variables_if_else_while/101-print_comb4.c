@@ -2,11 +2,11 @@
 
 /**
  * main - program that prints all possible different combinations of three digits
- *
  * Numbers must be separated by ,, followed by a space
  * he three digits must be different
  * print smallest combination of three digits
  * numbers printed in ascending order
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
