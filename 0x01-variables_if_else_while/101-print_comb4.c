@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 
 /**
  * main - program that prints all possible different combinations of three digits
@@ -33,6 +33,6 @@ int main(void)
 			}
 		}
 	}
-	puthcar('\n');
+	putchar('\n');
 	return (0);
 }
