@@ -10,19 +10,22 @@
  */
 int main(void)
 {
-	int hundreds, tens, ones;
+	int x;
+	int y;
+	int z;
 
-	for (hundreds = 0; hundreds <= 9; hundreds++)
+	for (x = 0; x <= 7; x++)
 	{
-		for (tens = hundreds + 1; tens <= 9; tens++)
+		y = x + 1;
+		for (; y <= 8; y++)
 		{
-			for (ones = tens +1; ones <= 9; ones++)
+			z = y + 1;
+			for (; z <= 9; z++)
 			{
-				putchar(hundreds + '0');
-				putchar(tens + '0');
-				putchar(ones + '0');
-
-				if (hundreds < 7)
+				putchar(x + '0');
+				putchar(y + '0');
+				putchar(z + '0');
+				if (x != 7)
 				{
 					putchar(',');
 					putchar(' ');
@@ -30,6 +33,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n');
+	puthcar('\n');
 	return (0);
 }
