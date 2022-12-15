@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -23,10 +22,11 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%i", i);
+
 		if (i != 100)
-			print(" ");
+			printf(" ");
 	}
-	
-	print("\n");
+
+	printf("\n");
 	return (0);
 }
