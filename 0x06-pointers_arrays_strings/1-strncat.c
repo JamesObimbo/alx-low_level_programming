@@ -7,24 +7,24 @@
  * @src: The string to append to dest
  * @dest: The string to concatenate with src
  * @n: The number of bytes to append
- * Return: The concatenated string
+ * Return: A pointer to the resulting string dest
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-	int len, i;
+	int dlen = 0, j = 0;
 
-	/* get the length of the dest string */
-	for (len = 0; dest[len] != 0; len++)
-		;
-
-	/* append src to dest one character at a time */
-	for (i = 0; i < n; i++)
+	while (dest[dlen])
 	{
-		dest[len] = src[i];
-		len++;
+		dlen++;
 	}
 
-	/* return concatendated string */
+	while (j < n && src[j])
+	{
+		dest[dlen] = src[j];
+		dlen++;
+		j++;
+	}
+
+	dest[dlen + n + 1] = '\0';
 	return (dest);
 }
