@@ -10,6 +10,7 @@
  * Description: adds two numbers from string
  * Return: sum of two integers
  */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int count, count2;
