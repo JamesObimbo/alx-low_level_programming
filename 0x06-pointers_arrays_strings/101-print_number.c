@@ -27,6 +27,7 @@ void print_number(int n)
 			/* print a minus sign */
 			_putchar('-');
 			/* and make n positive */
+			n *= -1;
 		}
 	/* print out n */
 	_putchar(n + '0');
