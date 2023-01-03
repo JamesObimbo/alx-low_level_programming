@@ -10,26 +10,25 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
-	char *p;
+	/**
+	 * initialize a helping variable
+	 * to assist in returning one of
+	 * our parameters pointers haystack
+	 */
+	char *h, *n;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	while (*haystack != '\0')
 	{
-		for (j = 0; needle[j] != '\0'; j++)
+		h = haystack;
+		n = needle;
+		while (*n != '\0' && *haystack == *n)
 		{
-			if (haystack[i] == needle[j])
-			{
-				p = &haystack[i];
-				while (haystack[i] == needle[j])
-				{
-					i++;
-					j++;
-					if (haystack[i] == ' ')
-						return (p);
-				}
-			}
+			haystack++;
+			n++;
 		}
+		if (!*n)
+			return (h);
+		haystack++;
 	}
-
-	return (0);
+	return ('\0');
 }
