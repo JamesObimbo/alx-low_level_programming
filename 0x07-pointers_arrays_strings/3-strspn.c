@@ -10,30 +10,26 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, matches;
+	int i, j, f;
 
-	if (s[0] == '\0' || accept[0] == '\0')
-		return (0);
-
-	/* loop through the s array */
-	for (i = 0; s[i] != '\0'; i++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		/* break out of this loop once matches has value */
-		if (matches != i)
-			break;
-
-		/* loop through the accept array */
-		for (j = 0; accept[j] != '\0'; j++)
+		j = 0;
+		f = 1; /*flag status*/
+		while (accept[j] != '\0')
 		{
-			/* if characters match */
 			if (s[i] == accept[j])
 			{
-				/* count it */
-				matches++;
-				/* then break out of accept array */
+				f = 0; /*success*/
 				break;
 			}
+			j++;
 		}
+		if (f == 1)
+			break;
+		i++;
 	}
-	return (matches);
+
+	return (i);
 }
