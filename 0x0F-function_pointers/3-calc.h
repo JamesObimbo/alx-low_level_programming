@@ -14,6 +14,7 @@ int op_mod(int a, int b);
  * @op: The operator
  * @f: The function associated
  */
+
 typedef struct op
 {
 	char *op;
